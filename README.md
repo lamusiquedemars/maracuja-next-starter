@@ -8,7 +8,7 @@ Le starter garde uniquement les fondations reutilisables:
 
 - App Router Next.js;
 - layout global;
-- composants UI simples;
+- composants UI simples et commentes;
 - sections generiques;
 - contenu local clair;
 - styles globaux + CSS Modules.
@@ -41,6 +41,8 @@ npm run dev
 - Couleurs, typos, espacements: `src/styles/tokens.css`
 - Layout global: `src/app/layout.tsx`
 - Sections de la home: `src/components/sections/HomePageView/HomePageView.tsx`
+- Boutons, badges, cards, fil d'Ariane: `src/components/ui/`
+- Headers de page et blocs reutilisables: `src/components/blocks/`
 
 ## Adapter Pour Un Projet
 
@@ -50,3 +52,11 @@ npm run dev
 4. Remplacer les couleurs et typos dans `src/styles/tokens.css`.
 5. Ajouter les sections specifiques dans `src/components/sections`.
 6. Ajouter les integrations externes dans `src/integrations` seulement si le projet en a besoin.
+
+## Convention De Commentaires
+
+Le starter documente surtout les intentions:
+
+- un commentaire court au-dessus des composants exportes;
+- pas de roman dans le CSS;
+- commentaires seulement quand ils aident a choisir le bon composant ou comprendre une decision.

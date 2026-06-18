@@ -1,0 +1,36 @@
+.pageHeader {
+  display: grid;
+  gap: var(--space-16);
+  padding-block: var(--space-32);
+}
+
+.title {
+  max-width: 16ch;
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.intro {
+  max-width: 70ch;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 1.125rem;
+  line-height: var(--lh-body);
+  text-wrap: pretty;
+}
+
+@media (min-width: 768px) {
+  .pageHeader {
+    gap: var(--space-24);
+    padding-block: var(--space-48);
+  }
+
+  .title {
+    max-width: 14ch;
+  }
+}
+

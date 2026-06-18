@@ -2,11 +2,14 @@
   --color-bg: #fffaf2;
   --color-text: #1d1d1d;
   --color-primary: #8c3f24;
+  --color-primary-strong: #762f1b;
   --color-accent: #d4a84f;
   --color-muted: #6f6a63;
   --color-surface: #ffffff;
   --color-surface-soft: #f4eadc;
   --color-border: #ded2c2;
+  --color-border-soft: #eadfce;
+  --color-success: #2f7d52;
   --color-white: #ffffff;
 
   --font-heading: Georgia, "Times New Roman", serif;
