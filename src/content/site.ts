@@ -30,11 +30,13 @@ export const siteConfig = {
   navigation: [
     { label: "Accueil", href: "/" },
     { label: "Sections", href: "#sections" },
+    { label: "Catalogue", href: "/catalogue" },
     { label: "Contact", href: "#contact" },
   ],
   footer: {
     links: [
       { label: "Documentation", href: "#sections" },
+      { label: "Catalogue exemple", href: "/catalogue" },
       { label: "Contact", href: "#contact" },
     ],
   },

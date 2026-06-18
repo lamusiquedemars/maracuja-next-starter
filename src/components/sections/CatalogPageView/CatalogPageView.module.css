@@ -1,0 +1,44 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-24);
+}
+
+.card {
+  justify-content: space-between;
+}
+
+.cardHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  color: var(--color-muted);
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+
+.cardBody {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.cardBody h2,
+.cardBody p {
+  margin: 0;
+}
+
+.cardBody h2 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-tight);
+}
+
+.cardBody p {
+  color: var(--color-muted);
+  line-height: var(--lh-body);
+}
+

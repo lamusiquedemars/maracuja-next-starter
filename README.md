@@ -10,7 +10,7 @@ Le starter garde uniquement les fondations reutilisables:
 - layout global;
 - composants UI simples et commentes;
 - sections generiques;
-- contenu local clair;
+- contenu local clair, dont une page catalogue exemple;
 - styles globaux + CSS Modules.
 
 Il ne contient pas de logique WooCommerce, WordPress, panier, catalogue metier ou contenu client specifique.
@@ -38,6 +38,7 @@ npm run dev
 
 - Navigation, nom du site, footer: `src/content/site.ts`
 - Textes de la home: `src/content/home.ts`
+- Exemple catalogue: `src/content/catalog.ts` et `src/app/catalogue/page.tsx`
 - Couleurs, typos, espacements: `src/styles/tokens.css`
 - Layout global: `src/app/layout.tsx`
 - Sections de la home: `src/components/sections/HomePageView/HomePageView.tsx`
@@ -60,3 +61,14 @@ Le starter documente surtout les intentions:
 - un commentaire court au-dessus des composants exportes;
 - pas de roman dans le CSS;
 - commentaires seulement quand ils aident a choisir le bon composant ou comprendre une decision.
+
+## Exemple Catalogue
+
+La route `/catalogue` montre une liste locale volontairement simple.
+
+- les textes et items sont dans `src/content/catalog.ts`;
+- le rendu est dans `src/components/sections/CatalogPageView/`;
+- aucune logique WooCommerce, WordPress ou API n'est incluse par defaut.
+
+Pour un projet reel, remplacez le contenu local par la source adaptee au site:
+CMS, API, base de donnees ou fichiers statiques.

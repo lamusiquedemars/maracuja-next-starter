@@ -19,8 +19,8 @@ const entries: EntryGridItem[] = [
   },
   {
     label: "Projet adaptable",
-    href: "#contact",
-    description: "Une base neutre a personnaliser sans emporter de logique metier inutile.",
+    href: "/catalogue",
+    description: "Une page catalogue neutre montre comment gerer une liste sans backend impose.",
   },
 ];
 
@@ -49,6 +49,7 @@ export const homeContent = {
     actions: [
       { label: "Voir la structure", href: "#sections" },
       { label: "Adapter le contenu", href: "#contact" },
+      { label: "Voir le catalogue", href: "/catalogue" },
     ],
   },
   intro: {
