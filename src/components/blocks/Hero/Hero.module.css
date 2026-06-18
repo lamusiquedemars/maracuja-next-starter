@@ -1,0 +1,4 @@
+.hero { padding-block: clamp(5rem, 12vw, 9rem); background: radial-gradient(circle at top left, color-mix(in srgb, var(--color-accent) 34%, transparent), transparent 34rem), var(--color-surface-soft); }
+.inner { width: min(100% - 2rem, 880px); margin-inline: auto; }
+.inner p { max-width: 62ch; margin-top: var(--space-16); color: var(--color-muted); font-size: 1.2rem; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-16); margin-top: var(--space-24); }

@@ -1,0 +1,3 @@
+.section { padding-block: var(--space-48); }
+.soft { background: var(--color-surface-soft); }
+@media (min-width: 768px) { .section { padding-block: var(--space-64); } }

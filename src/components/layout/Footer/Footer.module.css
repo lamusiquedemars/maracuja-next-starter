@@ -1,0 +1,5 @@
+.footer { background: var(--color-surface-soft); border-top: 1px solid var(--color-border); }
+.inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-24); width: min(100% - 2rem, var(--container)); margin-inline: auto; padding-block: var(--space-24); }
+.brand { font-weight: 700; }
+.links { display: flex; flex-wrap: wrap; gap: var(--space-16); list-style: none; padding: 0; }
+.links a:hover { color: var(--color-primary); }
