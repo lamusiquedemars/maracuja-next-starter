@@ -1,4 +1,108 @@
-.hero { padding-block: clamp(5rem, 12vw, 9rem); background: radial-gradient(circle at top left, color-mix(in srgb, var(--color-accent) 34%, transparent), transparent 34rem), var(--color-surface-soft); }
-.inner { width: min(100% - 2rem, 880px); margin-inline: auto; }
-.inner p { max-width: 62ch; margin-top: var(--space-16); color: var(--color-muted); font-size: 1.2rem; }
-.actions { display: flex; flex-wrap: wrap; gap: var(--space-16); margin-top: var(--space-24); }
+.hero {
+  padding-block: clamp(5rem, 12vw, 9rem);
+  background:
+    radial-gradient(
+      circle at top left,
+      color-mix(in srgb, var(--color-accent) 34%, transparent),
+      transparent 34rem
+    ),
+    var(--color-surface-soft);
+}
+
+.inner {
+  width: min(100% - 2rem, 880px);
+  margin-inline: auto;
+}
+
+.title {
+  margin: 0;
+  text-wrap: balance;
+}
+
+.subtitle {
+  max-width: 62ch;
+  margin-top: var(--space-16);
+  color: var(--color-muted);
+  font-size: 1.2rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+  margin-top: var(--space-24);
+}
+
+.page {
+  padding-block: clamp(4rem, 8vw, 6rem);
+}
+
+.wide .inner {
+  width: min(100% - 2rem, 1040px);
+}
+
+.left .inner {
+  text-align: left;
+}
+
+.center .inner {
+  text-align: center;
+}
+
+.center .subtitle {
+  margin-inline: auto;
+}
+
+.center .actions {
+  justify-content: center;
+}
+
+.compact {
+  min-height: 40vh;
+  padding-block: var(--space-48);
+}
+
+.withBackground {
+  position: relative;
+  min-height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.withBackground::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 0.35);
+}
+
+.withBackground .inner {
+  position: relative;
+  z-index: 1;
+}
+
+.withBackground .title,
+.withBackground .subtitle {
+  color: white;
+}
+
+.compact.withBackground {
+  min-height: 40vh;
+}
+
+@media (max-width: 640px) {
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .center .actions {
+    justify-content: stretch;
+  }
+
+  .compact,
+  .compact.withBackground {
+    min-height: 28vh;
+  }
+}

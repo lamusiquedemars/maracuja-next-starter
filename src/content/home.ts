@@ -1,5 +1,4 @@
 import type { EntryGridItem } from "@/components/blocks/EntryGrid/EntryGrid";
-import type { CardGridItem } from "@/components/blocks/CardGrid/CardGrid";
 
 type TextBlockContent = {
   title: string;
@@ -24,19 +23,19 @@ const entries: EntryGridItem[] = [
   },
 ];
 
-const cards: CardGridItem[] = [
+const startingPoints: EntryGridItem[] = [
   {
-    title: "Contenu",
+    label: "Contenu",
     href: "#sections",
     description: "Les textes exemples vivent dans src/content.",
   },
   {
-    title: "Composants",
+    label: "Composants",
     href: "#sections",
     description: "Les sections visibles vivent dans src/components/sections.",
   },
   {
-    title: "Styles",
+    label: "Styles",
     href: "#styles",
     description: "Les fondations vivent dans src/styles, les details avec les composants.",
   },
@@ -63,7 +62,7 @@ export const homeContent = {
   cards: {
     title: "Ou commencer",
     subtitle: "Trois endroits suffisent pour adapter la premiere page.",
-    items: cards,
+    items: startingPoints,
   },
   closing: {
     title: "Pret a personnaliser",

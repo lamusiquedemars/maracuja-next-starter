@@ -7,27 +7,62 @@ type HeroAction = {
   href: string;
 };
 
+type HeroVariant = "home" | "page" | "wide";
+type HeroAlign = "left" | "center";
+type HeroHeight = "default" | "compact";
+
 type HeroProps = {
   title: string;
   subtitle?: string;
   actions?: HeroAction[];
+  variant?: HeroVariant;
+  align?: HeroAlign;
+  height?: HeroHeight;
+  backgroundImage?: string;
+  backgroundPosition?: string;
   className?: string;
 };
 
 /**
- * First-screen editorial hero. Content comes from src/content/home.ts.
+ * Generic editorial hero.
+ * Use variants for layout needs instead of overriding the component CSS.
  */
 export default function Hero({
   title,
   subtitle,
   actions = [],
+  variant = "home",
+  align = "left",
+  height = "default",
+  backgroundImage,
+  backgroundPosition,
   className,
 }: HeroProps) {
+  const style =
+    backgroundImage || backgroundPosition
+      ? {
+          backgroundImage: backgroundImage
+            ? `url(${backgroundImage})`
+            : undefined,
+          backgroundPosition,
+        }
+      : undefined;
+
   return (
-    <section className={clsx(styles.hero, className)}>
+    <section
+      className={clsx(
+        styles.hero,
+        styles[variant],
+        styles[align],
+        styles[height],
+        backgroundImage && styles.withBackground,
+        className
+      )}
+      style={style}
+    >
       <div className={styles.inner}>
-        <h1>{title}</h1>
-        {subtitle ? <p>{subtitle}</p> : null}
+        <h1 className={styles.title}>{title}</h1>
+        {subtitle ? <p className={styles.subtitle}>{subtitle}</p> : null}
 
         {actions.length > 0 ? (
           <div className={styles.actions}>
@@ -42,4 +77,3 @@ export default function Hero({
     </section>
   );
 }
-

@@ -1,4 +1,3 @@
-import CardGrid from "@/components/blocks/CardGrid/CardGrid";
 import EntryGrid from "@/components/blocks/EntryGrid/EntryGrid";
 import Hero from "@/components/blocks/Hero/Hero";
 import TextBlock from "@/components/blocks/TextBlock/TextBlock";
@@ -39,7 +38,7 @@ export default function HomePageView({ content }: HomePageViewProps) {
             title={content.cards.title}
             subtitle={content.cards.subtitle}
           />
-          <CardGrid items={content.cards.items} />
+          <EntryGrid items={content.cards.items} />
         </Container>
       </Section>
 
@@ -51,4 +50,3 @@ export default function HomePageView({ content }: HomePageViewProps) {
     </>
   );
 }
-
